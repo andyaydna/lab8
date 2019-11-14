@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="eng">
+        <head>
+                <title>Lab 8</title>
+        </head>
+
+        <body>
+            <script>
+
+                //PART A
+
+                var user_input = prompt("Please enter a number between 0 - 26")
+                //console.log(user_input)
+
+                while (user_input >= 27) {
+                    var user_input = prompt("Please enter a number between 0 - 26")
+                }
+
+                let letter = { 0:'A', 1:'B', 2:'C', 3:'D', 4:'E', 5:'F', 6:'G', 7:'H', 8:'I', 9:'J', 10:'K', 11:'L', 12:'M', 13:'N', 14:'O', 15:'P', 16:'Q', 17:'R', 18:'S', 19:'T', 20:'U', 21:'V', 22:'W', 23:'X', 24:'Y', 25:'Z' }
+
+                for (i = 0; i < user_input; i++) {
+                let btn = document.createElement("BUTTON");
+                document.body.appendChild(btn).onclick = click;
+                btn.innerHTML = letter[i]
+                function click() 
+                {
+                    console.log("Button " + btn.innerHTML + " was clicked")
+                }
+                } 
+
+                //PART B
+
+                let MyObj = new Myrecipe ("Chicken Cacciatore", 2, ["cinnamon", "lettuce", "onion"])
+
+                function Myrecipe(title, serves, ingredients)
+                {
+                    this.title = title;
+                    this.serves = serves;
+                    this.ingredients = ingredients;
+                }
+                console.log(MyObj)
+
+            </script>
+        </body>
+</html>
